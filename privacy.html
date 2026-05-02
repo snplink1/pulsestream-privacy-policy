@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy - PulseStream Preview</title>
+
+<style>
+:root {
+    --bg: #f2f2f7;
+    --card: #ffffff;
+    --text: #1c1c1e;
+    --muted: #6e6e73;
+    --border: #e5e5ea;
+    --accent: #0a84ff;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+.wrapper {
+    max-width: 920px;
+    margin: 40px auto;
+    padding: 0 16px;
+}
+
+.card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 32px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+}
+
+h1 {
+    font-size: 30px;
+    margin-bottom: 6px;
+}
+
+h2 {
+    font-size: 18px;
+    margin-top: 26px;
+    margin-bottom: 6px;
+}
+
+p, li {
+    color: var(--muted);
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+.footer {
+    margin-top: 30px;
+    font-size: 13px;
+    color: var(--muted);
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .wrapper {
+        margin: 0;
+        padding: 0;
+    }
+    .card {
+        border-radius: 0;
+        padding: 20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+<div class="card">
+
+<h1>Privacy Policy</h1>
+<p><strong>Effective Date:</strong> <span id="date"></span></p>
+
+<h2>1. No Personal Data Collection</h2>
+<p>PulseStream Preview does not collect, store, or share any personal data. No account, sign-up, email, phone number, or location data is required or collected.</p>
+
+<h2>2. No Tracking or Analytics</h2>
+<p>The app does not use analytics tools, tracking technologies, advertising SDKs, or cookies of any kind.</p>
+
+<h2>3. Music Preview Functionality</h2>
+<p>The app provides short audio previews through third-party services strictly for discovery purposes. PulseStream Preview does not host, own, or distribute any music content.</p>
+
+<h2>4. Third-Party Services</h2>
+<p>The app uses publicly available APIs to retrieve music metadata, artwork, and preview audio. These third-party services may process requests in accordance with their own privacy policies.</p>
+
+<h2>5. Local Storage Only</h2>
+<ul>
+<li>Saved songs</li>
+<li>Playlists</li>
+<li>User preferences</li>
+</ul>
+<p>This data is stored only on your device and is never transmitted externally.</p>
+
+<h2>6. No Downloads</h2>
+<p>The app does not provide full song downloads or permanent storage of third-party audio content.</p>
+
+<h2>7. Children’s Privacy</h2>
+<p>The app does not knowingly collect personal information from children under the age of 13.</p>
+
+<h2>8. Security</h2>
+<p>Since no personal data is collected, there is no risk of personal data exposure.</p>
+
+<h2>9. Updates</h2>
+<p>This policy may be updated periodically to reflect changes or improvements.</p>
+
+<h2>10. Contact</h2>
+<p>Email: contactsnaplink@gmail.com</p>
+
+<div class="footer">
+©️ <span id="year"></span> PulseStream Preview
+</div>
+
+</div>
+</div>
+
+<script>
+const now = new Date();
+
+document.getElementById("date").textContent =
+    now.toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "long",
+        day: "numeric"
+    });
+
+document.getElementById("year").textContent = now.getFullYear();
+</script>
+
+</body>
+</html>
