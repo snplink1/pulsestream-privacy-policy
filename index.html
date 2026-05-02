@@ -7,18 +7,16 @@
 
 <style>
 :root {
-    --bg: #0b0c10;
-    --card: rgba(255,255,255,0.06);
-    --glass: rgba(255,255,255,0.08);
+    --bg: #020617;
+    --card: rgba(255,255,255,0.08);
     --text: #ffffff;
-    --muted: #a1a1aa;
+    --muted: #cbd5e1;
     --accent: #8b5cf6;
+    --accent2: #6366f1;
     --border: rgba(255,255,255,0.12);
 }
 
-* {
-    box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
     margin: 0;
@@ -27,12 +25,14 @@ body {
     color: var(--text);
 }
 
+/* CONTAINER */
 .container {
     max-width: 900px;
     margin: 60px auto;
     padding: 20px;
 }
 
+/* CARD */
 .card {
     background: var(--card);
     backdrop-filter: blur(20px);
@@ -42,14 +42,10 @@ body {
     box-shadow: 0 20px 60px rgba(0,0,0,0.4);
 }
 
-h1 {
-    font-size: 34px;
-    margin-bottom: 10px;
-}
-
+/* TEXT */
 .tag {
     display: inline-block;
-    background: var(--glass);
+    background: rgba(255,255,255,0.1);
     padding: 6px 12px;
     border-radius: 999px;
     font-size: 12px;
@@ -57,11 +53,17 @@ h1 {
     margin-bottom: 20px;
 }
 
+h1 {
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
 p {
     color: var(--muted);
     line-height: 1.6;
 }
 
+/* FEATURES */
 .features {
     margin-top: 30px;
 }
@@ -70,10 +72,9 @@ p {
     margin-bottom: 14px;
 }
 
+/* BUTTON */
 .cta {
     margin-top: 40px;
-    display: flex;
-    gap: 12px;
 }
 
 .button {
@@ -82,19 +83,11 @@ p {
     text-decoration: none;
     font-size: 14px;
     font-weight: 500;
-}
-
-.primary {
-    background: linear-gradient(135deg, #8b5cf6, #6366f1);
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
     color: white;
 }
 
-.secondary {
-    background: transparent;
-    border: 1px solid var(--border);
-    color: var(--text);
-}
-
+/* FOOTER */
 .footer {
     margin-top: 40px;
     font-size: 13px;
@@ -102,6 +95,12 @@ p {
     text-align: center;
 }
 
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .container {
+        margin: 20px;
+    }
+}
 </style>
 </head>
 
@@ -127,7 +126,7 @@ p {
         </div>
 
         <div class="cta">
-            <a href="/pulsestream-privacy-policy/privacy.html" class="button primary">
+            <a href="./privacy.html" class="button">
                 View Privacy Policy
             </a>
         </div>
@@ -142,101 +141,6 @@ p {
 <script>
 document.getElementById("year").textContent = new Date().getFullYear();
 </script>
-
-</body>
-</html>    color: var(--subtle);
-    font-size: 16px;
-}
-
-/* CONTAINER */
-.container {
-    max-width: 900px;
-    margin: 20px auto 60px;
-    padding: 30px;
-    background: var(--card);
-    border-radius: 18px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
-}
-
-/* SECTION */
-.section {
-    margin-bottom: 28px;
-}
-
-.section h2 {
-    font-size: 18px;
-    margin-bottom: 8px;
-}
-
-.section p {
-    color: var(--subtle);
-    line-height: 1.6;
-}
-
-ul {
-    color: var(--subtle);
-}
-
-/* FOOTER */
-.footer {
-    text-align: center;
-    margin-top: 30px;
-    font-size: 13px;
-    color: var(--subtle);
-}
-
-@media (max-width: 600px) {
-    .container {
-        margin: 0;
-        border-radius: 0;
-        padding: 20px;
-    }
-}
-</style>
-</head>
-
-<body>
-
-<div class="hero">
-    <h1>PulseStream Preview</h1>
-    <p>Simple, fast music discovery through high-quality previews.</p>
-</div>
-
-<div class="container">
-
-<div class="section">
-<h2>About</h2>
-<p>PulseStream Preview is a lightweight music discovery app designed to help you explore songs quickly through short audio previews. No accounts, no clutter, just fast and clean playback.</p>
-</div>
-
-<div class="section">
-<h2>Features</h2>
-<ul>
-<li>Instant playback of song previews</li>
-<li>Fast and responsive search</li>
-<li>Trending and recommended tracks</li>
-<li>Save your favorite songs</li>
-<li>Minimal and clean interface</li>
-</ul>
-</div>
-
-<div class="section">
-<h2>Support</h2>
-<p>If you need help or have any questions, contact:</p>
-<p><strong>contactsnaplink@gmail.com</strong></p>
-</div>
-
-<div class="section">
-<h2>Privacy</h2>
-<p>PulseStream Preview does not collect or store personal user data. Music previews are provided by third-party services for discovery purposes only.</p>
-<p><a href="#">Full Privacy Policy</a></p>
-</div>
-
-<div class="footer">
-©️ 2026 PulseStream Preview
-</div>
-
-</div>
 
 </body>
 </html>
