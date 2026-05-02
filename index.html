@@ -7,34 +7,144 @@
 
 <style>
 :root {
-    --primary: #0a84ff;
-    --bg: #f2f2f7;
-    --card: #ffffff;
-    --text: #1c1c1e;
-    --subtle: #6e6e73;
+    --bg: #0b0c10;
+    --card: rgba(255,255,255,0.06);
+    --glass: rgba(255,255,255,0.08);
+    --text: #ffffff;
+    --muted: #a1a1aa;
+    --accent: #8b5cf6;
+    --border: rgba(255,255,255,0.12);
+}
+
+* {
+    box-sizing: border-box;
 }
 
 body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
-    background: var(--bg);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+    background: radial-gradient(circle at top, #111827, #020617);
     color: var(--text);
 }
 
-/* HERO */
-.hero {
-    text-align: center;
-    padding: 60px 20px 30px;
+.container {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 20px;
 }
 
-.hero h1 {
+.card {
+    background: var(--card);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+}
+
+h1 {
     font-size: 34px;
-    margin: 0;
+    margin-bottom: 10px;
 }
 
-.hero p {
-    margin-top: 10px;
-    color: var(--subtle);
+.tag {
+    display: inline-block;
+    background: var(--glass);
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 20px;
+}
+
+p {
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+.features {
+    margin-top: 30px;
+}
+
+.feature {
+    margin-bottom: 14px;
+}
+
+.cta {
+    margin-top: 40px;
+    display: flex;
+    gap: 12px;
+}
+
+.button {
+    padding: 12px 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.primary {
+    background: linear-gradient(135deg, #8b5cf6, #6366f1);
+    color: white;
+}
+
+.secondary {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text);
+}
+
+.footer {
+    margin-top: 40px;
+    font-size: 13px;
+    color: var(--muted);
+    text-align: center;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="card">
+
+        <div class="tag">Preview App</div>
+
+        <h1>PulseStream Preview</h1>
+
+        <p>
+            Discover music instantly through lightweight, high-speed audio previews.
+            Built for exploration, not storage. Clean, fast, and privacy-first.
+        </p>
+
+        <div class="features">
+            <div class="feature">• Search and preview songs instantly</div>
+            <div class="feature">• No login, no personal data collection</div>
+            <div class="feature">• Local-only preferences and saved songs</div>
+            <div class="feature">• Powered by third-party music preview APIs</div>
+        </div>
+
+        <div class="cta">
+            <a href="/pulsestream-privacy-policy/privacy.html" class="button primary">
+                View Privacy Policy
+            </a>
+        </div>
+
+        <div class="footer">
+            ©️ <span id="year"></span> PulseStream Preview
+        </div>
+
+    </div>
+</div>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>    color: var(--subtle);
     font-size: 16px;
 }
 
